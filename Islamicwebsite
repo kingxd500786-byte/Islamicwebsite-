@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آؤ درود و سلام پڑھیں</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Naskh Arabic', sans-serif;
+            background-color: #e0f7fa; /* Light cyan background */
+            background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); /* Subtle Islamic pattern */
+            color: #1a202c;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            text-align: center;
+        }
+        .ad-banner {
+            width: 100%;
+            background-color: #f0f0f0;
+            padding: 0.5rem;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+            border-top: 2px solid #ddd;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Top Ad Banner -->
+    <div class="ad-banner shadow-sm">
+        <script async="async" data-cfasync="false" src="//pl27401949.profitableratecpm.com/7138c1b8ed5f790a9060b3344f350bd1/invoke.js"></script> <div id="container-7138c1b8ed5f790a9060b3344f350bd1"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="bg-white p-8 rounded-xl shadow-lg max-w-lg w-full">
+            <h1 class="text-3xl font-bold mb-4 text-emerald-700">
+                آؤ درود و سلام پڑھیں
+            </h1>
+
+            <p class="text-2xl font-bold mb-6 text-gray-800 leading-relaxed">
+                إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ ۚ يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا
+            </p>
+            <p class="text-xl mb-8 text-gray-600">
+                ترجمہ: بے شک اللہ اور اس کے فرشتے نبی پر درود بھیجتے ہیں، اے ایمان والو! تم بھی ان پر درود بھیجو اور خوب سلام بھیجا کرو۔
+            </p>
+            
+            <button id="duroodButton" class="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50">
+                درود پڑھیں
+            </button>
+
+            <p class="text-xl mt-6 text-gray-800">
+                علیہ الصلوٰۃ والسلام ♥️
+            </p>
+
+            <div class="mt-4">
+                <p class="text-lg text-gray-600">آپ نے درود پڑھا ہے:</p>
+                <p id="counter" class="text-4xl font-extrabold text-blue-700">0</p>
+            </div>
+            
+            <!-- Middle Ad Banner -->
+            <div class="ad-banner shadow-sm mt-8">
+                <script async="async" data-cfasync="false" src="//pl27401949.profitableratecpm.com/7138c1b8ed5f790a9060b3344f350bd1/invoke.js"></script> <div id="container-7138c1b8ed5f790a9060b3344f350bd1"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Ad Banner -->
+    <div class="ad-banner shadow-sm">
+        <script async="async" data-cfasync="false" src="//pl27401949.profitableratecpm.com/7138c1b8ed5f790a9060b3344f350bd1/invoke.js"></script> <div id="container-7138c1b8ed5f790a9060b3344f350bd1"></div>
+    </div>
+
+    <script>
+        // HTML elements کو منتخب کرنا
+        const duroodButton = document.getElementById('duroodButton');
+        const counterDisplay = document.getElementById('counter');
+
+        // Local storage سے گنتی شروع کرنا یا 0 سے
+        let count = localStorage.getItem('duroodCount') ? parseInt(localStorage.getItem('duroodCount')) : 0;
+        
+        // گنتی کو ظاہر کرنے والا فنکشن
+        function updateCounterDisplay() {
+            counterDisplay.textContent = count.toLocaleString('ur-PK'); // اردو میں اعداد دکھانا
+        }
+
+        // صفحہ لوڈ ہونے پر گنتی دکھانا
+        updateCounterDisplay();
+
+        // درود بٹن پر کلک کرنے پر
+        duroodButton.addEventListener('click', () => {
+            // گنتی بڑھانا
+            count++;
+            
+            // نئی گنتی کو local storage میں محفوظ کرنا
+            localStorage.setItem('duroodCount', count);
+            
+            // گنتی کو اپڈیٹ کرنا
+            updateCounterDisplay();
+        });
+    </script>
+</body>
+</html>
